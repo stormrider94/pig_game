@@ -1,0 +1,196 @@
+* {
+   padding: 0;
+   margin : 0;
+}
+
+:root{
+    --container-background-color :  #340B5C;
+    --player-0-background-color : #7600A3;
+    --player-1-background-color : #B61DF0;
+    --score-box-background-color: #B82ABD;
+    --score-box-0-and-score-box-1-text-color : #07000F; 
+    --help-button-text-color : white;
+    --help-button-background-color : purple;
+    --roll-dice-button-text-color : white;
+    --roll-dice-button-background-color : purple;
+    --total-score-box-text-color : #fff;
+    /* for the newgame and hold buttons, their background colors are white and their text colors are black which is the default*/
+
+}
+.bluey-cool {
+    --container-background-color : #DEF5FC;
+    --player-0-background-color : #94ddf5;
+    --player-1-background-color :#D3F1FB ;
+    --score-box-background-color: #1298c4;
+    /* --score-box-0-and-score-box-1-text-color : #020e13;  */
+    --score-box-0-and-score-box-1-text-color:#fff;
+    --help-button-text-color : #020E13;
+    --help-button-background-color : #ABE4F7;
+    --roll-dice-button-text-color : #020E13;
+    --roll-dice-button-background-color :#ABE4F7 ;
+    --total-score-box-text-color :#1298c4;
+}
+.container {
+    width: 100%;
+    height : 100vh;
+    /* background :#5A0B5C; */
+    background: var(--container-background-color);
+    padding-top : 50px;
+}
+.game-box {
+    display: flex;
+    position: relative;
+    width: 65%;
+    height : 65%;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.game-box img {
+    display: block;
+    position : absolute;
+    height: 7rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    left : 50%;
+    top: 40%;
+}
+.game-box img.hide {
+    display: none;
+}
+.game-box img.show {
+    display: block;
+}
+.player-1.active-player , .player-0.active-player {
+    background-color: #94F3F5;
+}
+.player-1.active-player h2, .player-0.active-player h2 {
+    font-weight: 400;
+}
+.player-1.active-player h3 , .player-0.active-player h3{
+    font-weight : 350;
+    color: #8700B9;
+    font-size: 1.8em;
+}
+.player-0 , .player-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.player-0 {
+    width : 50%;
+    background: var(--player-0-background-color);
+    transition: all 0.90s ease;
+}
+
+.player-1 {
+    width: 50%;
+    background : var(--player-1-background-color);
+    transition: all 0.90s ease;
+}
+.total-score-box-0 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height : 100px;
+    justify-content: space-around;
+    color : var(--total-score-box-text-color)
+}
+.total-score-box-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height : 100px;
+    justify-content: space-around;
+    color: var(--total-score-box-text-color);
+}
+
+.game-box .help {
+    position : absolute;
+    top : 12%;
+    left : 43%;
+    height: 35px;
+    border-radius: 10px;
+    width: 120px;
+    background-color: var(--help-button-background-color);
+    color: var(--help-button-text-color);
+    border: none;
+    cursor: pointer;
+}
+.game-box .new-game {
+    position : absolute;
+    top : 22%;
+    left : 45%;
+    position: absolute;
+    top: 22%;
+    left: 45%;
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.game-box .roll-dice {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    width: 100px;
+    height: 30px;
+    border-radius: 21px;
+    border: none;
+    background-color: var(--roll-dice-button-background-color);
+    color: var(--roll-dice-button-text-color);
+    cursor: pointer;
+}
+.game-box .hold {
+    /* position : absolute;
+    top : 77%;
+    left : 46%;
+    height: 35px;
+    border-radius: 10px;
+    width: 120px;
+    background-color: purple;
+    color: white;
+    border: none; */
+    position: absolute;
+    top: 77%;
+    left: 46%;
+    margin-top: 10px;
+    width: 70px;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+}
+
+.score-box-0 , .score-box-1 {
+ width : 120px;
+ height : 60px;
+ align-self: center;
+ text-align: center;
+ border : .2em;
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: space-around;
+ background: var(--score-box-background-color);
+ cursor: pointer;
+ color: var(--score-box-0-and-score-box-1-text-color);
+}
+
+.winner-div {
+    /* width: 65% ;
+    height : 1.5em;
+    background-color: #B82ABD;
+    text-align : center;
+    border-radius : 2px; */
+    width: 65%;
+    height: 3em;
+    background-color: #94F3F5;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-top: 12px;
+}
