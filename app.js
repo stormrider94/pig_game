@@ -141,3 +141,16 @@ hold_points_button.addEventListener('click',function(){
         switchPlayer()
     }
 })
+
+new_game_button.addEventListener('click',function(){
+    // current_score = 0
+    // total_score = 0 
+    // current_player = random_player_turn()
+    // roll_dice_button.disabled = false
+    // hold_points_button.disabled = false
+    // if(document.getElementsByClassName('winner-div')[0]){
+    //     container.removeChild(document.getElementsByClassName('winner-div')[0])
+    // }
+    dice.classList.add('show')
+    location.reload()
+})
